@@ -1,0 +1,15 @@
+{% extends '__base.html' %}
+
+
+{% block content %}
+
+<div class="form-signin text-center">
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Получить файлы для скачивания</button>
+</form>
+
+</div>
+
+{% endblock content %}

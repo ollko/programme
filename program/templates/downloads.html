@@ -1,0 +1,11 @@
+{% extends '__base.html' %}
+
+{% block content %}
+
+<h1>Файлы для скачивания:</h1>
+{% for program in object_list %}
+    <a class="btn btn-primary" href="{% url 'download_file' program.channel program.efirweek %}" role="button">{{ program.channel }} - {{ program.efirweek|date }}</a>
+    {% empty %}
+    <li>Пока нет программ.</li>
+{% endfor %}
+{% endblock content %}
